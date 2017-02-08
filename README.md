@@ -1,17 +1,17 @@
 WIFITEST
 ======
 
-一个简单的wifi弱口令暴破的python脚本，可自动实时破解，不需要使用aircrack-ng抓包，只是有点慢...
+一个简单的WIFI弱口令暴破的python脚本，可自动实时破解，不需要使用aircrack-ng抓包，只是有点慢...
 
 * python only
 * Linux平台，在kali下测试通过
 * 参考来源: [一个非常简单易懂的WIFI密码爆破python脚本](https://my.oschina.net/Apathy/blog/821039)
-* 成功率依赖字典与无线网络的信号强度
+* 成功率依赖于字典和无线网络的信号强度
 
 安装和依赖
 -------------
 
-	1、安装pywinfi: pip install pywifi
+	1、pywifi: pip install pywifi
 	2、无线网卡
 	3、Linux与python2.7
 
@@ -57,7 +57,6 @@ WIFINO| SSID OR BSSID     |  TIME  | KEYNUM KEY             | STATUS
 2     | Tenda_12ABD8      |        |                        | FAIL!
 3     | TP-LINK_D4D0      |        |                        | FAIL!
 4     | RP                |        |                        | FAIL!
-5     | \xb7\xcf\xc6\xb7\xbb\xd8\xca\xd5|        |                        | FAIL!
 ...
 ```
 
