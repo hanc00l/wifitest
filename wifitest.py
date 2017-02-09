@@ -31,6 +31,8 @@ def get_akm_name(akm_value):
             if v == a:
                 akm_names.append(k)
                 break
+    if len(akm_names) == 0 :
+        akm_names.append("OPEN")
 
     return '/'.join(akm_names)
 
@@ -55,14 +57,14 @@ def scan(face):
         elif ssid == '\\x00':       #hidden ssid
             ssid = '<length: 1>'
         else:   
-            if len(x.akm)>=1:       #if len(x.akm)==0 ,the auth is OPEN
+            if len(x.akm) > 0:       #if len(x.akm)==0 ,the auth is OPEN
                 ap_list[x.bssid] = x
         print "%-4s %-20s| %-20s | %-6s | %s"%(i+1,ssid,x.bssid,x.signal,get_akm_name(x.akm))
  
     return face.scan_results(),ap_list
 
 def test(i,face,x,key,stu,ts):
-    showID = x.bssid if len(x.ssid)==0 or x.ssid=='\\x00' else x.ssid
+    showID = x.bssid if len(x.ssid)==0 or x.ssid=='\\x00' or len(x.ssid)>len(x.bssid) else x.ssid
     key_index = 0
     while key_index < len(key):
         k = key[key_index]

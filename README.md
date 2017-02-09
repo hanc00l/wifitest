@@ -5,8 +5,8 @@ WIFITEST
 
 * python only
 * Linux平台，在kali下测试通过
-* 参考来源: [一个非常简单易懂的WIFI密码爆破python脚本](https://my.oschina.net/Apathy/blog/821039)
 * 成功率依赖于字典和无线网络的信号强度
+* 参考来源: [一个非常简单易懂的WIFI密码爆破python脚本](https://my.oschina.net/Apathy/blog/821039)
 
 安装和依赖
 -------------
